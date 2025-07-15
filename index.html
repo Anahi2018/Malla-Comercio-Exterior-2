@@ -3,18 +3,103 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Malla Interactiva - Comercio Exterior ESPE</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Malla Interactiva - Comercio Exterior</title>
+    <style>
+        body {
+            font-family: 'Olympic', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #E493B3;
+            color: #CB80AB;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #E6B2BA;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #malla-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .semestre {
+            width: 100%;
+            max-width: 300px;
+            background-color: #F0C1E1;
+            border: 2px solid #E6B2BA;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .semestre h2 {
+            color: #E493B3;
+            text-align: center;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .materia {
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #E6B2BA;
+            background-color: #F0C1E1;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .materia:hover {
+            background-color: #F5CBCB;
+        }
+
+        .materia.bloqueada {
+            background-color: #D9A299;
+            color: #DCC5B2;
+            pointer-events: none;
+        }
+
+        .materia.aprobada {
+            background-color: #C599B6; /* morado pastel */
+            color: #CB9DF0;
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <h1>Malla Interactiva - Comercio Exterior (ESPE)</h1>
-        <p>
-            Eres más valiente de lo que crees, más fuerte de lo que pareces y más inteligente de lo que piensas.
-        </p>
-        <div id="malla-container"></div>
-    </main>
-    <script src="script.js"></script>
+
+    <h1>Malla Interactiva - Comercio Exterior</h1>
+    <p>Haz clic en una materia para marcarla como aprobada</p>
+
+    <div id="malla-container">
+        <div class="semestre">
+            <h2>Semestre 1</h2>
+            <div class="materia">Materia 1</div>
+            <div class="materia">Materia 2</div>
+            <div class="materia">Materia 3</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 2</h2>
+            <div class="materia">Materia 4</div>
+            <div class="materia">Materia 5</div>
+            <div class="materia">Materia 6</div>
+        </div>
+
+        <!-- Puedes continuar con más semestres -->
+    </div>
+
 </body>
 </html>
+
 
